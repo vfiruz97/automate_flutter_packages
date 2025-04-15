@@ -1,3 +1,4 @@
+import '../../../core/services/google_map_test_file_service.dart';
 import 'android_configuration_service.dart';
 import 'ios_configuration_service.dart';
 
@@ -12,6 +13,7 @@ class PlatformConfigurationService {
   Future<String> configurePlatforms(String projectPath, String apiKey) async {
     final androidMessage = await androidService.updateAndroidManifest(projectPath, apiKey);
     final iosMessage = await iosService.updateInfoPlist(projectPath, apiKey);
+    await GoogleMapTestFileService.copyGoogleMapTestFile(projectPath);
     return 'Android: $androidMessage\n iOS: $iosMessage';
   }
 }
