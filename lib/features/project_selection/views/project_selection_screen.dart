@@ -2,6 +2,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../router/app_router.dart';
 import '../bloc/project_selection_bloc.dart';
 
 class ProjectSelectionScreen extends StatelessWidget {
@@ -31,6 +32,7 @@ class ProjectSelectionScreen extends StatelessWidget {
             ScaffoldMessenger.of(
               context,
             ).showSnackBar(SnackBar(content: Text('Project directory selected:\n${state.projectDirectory}')));
+            Navigator.pushNamed(context, AppRouter.integration, arguments: state.projectDirectory);
           }
         },
         builder: (context, state) {
