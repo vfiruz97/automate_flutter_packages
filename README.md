@@ -37,34 +37,6 @@ This project is a starting point for automating Flutter package workflows. Follo
    flutter run
    ```
 
-## Usage
-
-- **Automate Tasks**: Use the provided scripts to automate tasks like dependency updates and versioning.
-- **Testing**: Run tests to ensure package stability:
-  ```bash
-  flutter test
-  ```
-- **Publishing**: Follow the publishing guide to release your packages.
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add your message here"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Open a pull request.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
