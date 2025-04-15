@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../router/app_router.dart';
 import '../bloc/package_integration_bloc.dart';
 
 class PackageIntegrationScreen extends StatelessWidget {
@@ -22,6 +23,7 @@ class PackageIntegrationScreen extends StatelessWidget {
             ScaffoldMessenger.of(
               context,
             ).showSnackBar(SnackBar(content: Text(state.message), backgroundColor: Colors.green));
+            Navigator.pushNamed(context, AppRouter.apiKey, arguments: projectDirectory);
           }
         },
         builder: (context, state) {
